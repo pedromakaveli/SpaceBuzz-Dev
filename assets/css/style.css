@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@800&family=IBM+Plex+Mono:wght@200;300;400&family=Open+Sans+Condensed:wght@700&family=Open+Sans:wght@800&display=swap");
+
+:root {
+  --gap: 3rem;
+  --theme-color-white: rgb(235, 233, 233);
+  --theme-color-black: rgb(14, 13, 13);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+button {
+  all: unset;
+}
+
+a {
+  display: inline-block;
+}
+
+body {
+  background-color: var(--theme-color-white);
+  color: var(--theme-color-black);
+  font-family: "Fira Sans", arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p,
+a,
+li {
+  font-size: 1.8rem;
+}
+
+h1 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 5.5rem;
+}
+
+h2 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 4rem;
+}
+
+h3 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 2.1rem;
+}
+
+h4 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.9rem;
+}
+
+h5 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.7rem;
+}
+
+h6 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.5rem;
+}
+
+img {
+  margin: 0;
+  max-width: 100%;
+  display: block;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section {
+  max-height: 100vh;
+}
+
+.logo-menu {
+  font-size: 2.8rem;
+}
+
+.separa {
+  border: none;
+  height: 2px;
+  background: linear-gradient(45deg, purple, pink, blue);
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header {
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  min-width: 100vw;
+  padding: 1.5rem 3rem;
+}
+
+.header-menu ul {
+  list-style: none;
+}
+
+.header-menu li {
+  margin-right: 5rem;
+  display: inline-block;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.header-menu li a {
+  color: rgb(31, 36, 63);
+}
+
+.header-menu li a {
+  position: relative;
+}
+
+.header-menu li a:hover {
+  transition: all 100ms ease-in-out;
+  color: rgb(11, 49, 216);
+}
+
+.header-menu li a:after {
+  content: "";
+  position: absolute;
+  bottom: -2rem;
+  left: 15%;
+  width: 0%;
+  height: 0.4rem;
+  background: rgb(11, 49, 216);
+  border-radius: 50px;
+  transition: all 300ms ease-in-out;
+}
+
+.header-menu li a:hover::after {
+  width: 70%;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.btn-contato {
+  font-size: 1.8rem;
+  letter-spacing: 0.3px;
+  font-family: "IBM Plex Mono", monospace;
+  background: linear-gradient(42deg, rgb(38, 0, 255), rgb(140, 0, 255));
+  color: #fff;
+  border-radius: 50px;
+  padding: 9px 35px;
+}
+
+.intro {
+  margin-top: 10rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 7.7fr 12fr;
+  place-items: center;
+}
+
+.grid-item {
+  gap: 20px;
+  display: grid;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.grid-item h1 {
+  font-weight: bold;
+  font-size: 6rem;
+}
+
+.grid-item p {
+  font-family: "IBM Plex Mono", monospace;
+
+  color: rgb(121, 121, 121);
+}
+
+.btn {
+  display: inline-block;
+  font-size: 2.2rem;
+  justify-self: start;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  animation: ease-in-out 1s;
+  box-shadow: 0 0 35px rgb(0, 81, 255);
+}
+
+.features {
+  grid-column: 1/-1;
+}
+
+.titulo-escolher {
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.grid-cards {
+  padding: 35px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+}
+
+.features h2 {
+  text-transform: uppercase;
+}
+
+.card-item {
+  text-align: center;
+}
+
+.card-item h3 {
+  color: rgb(92, 92, 92);
+  text-transform: uppercase;
+}
+
+@media (max-width: 789px) {
+  header {
+    display: none;
+  }
+  .intro h1,
+  p {
+    text-align: center;
+  }
+
+  .btn-contato {
+    justify-self: center;
+  }
+
+  .titulo-escolher {
+    text-align: center;
+  }
+
+  .grid-cards {
+    display: grid;
+    grid-template-columns: 12fr;
+  }
+
+  .grid {
+    display: block;
+  }
+
+  .features {
+    margin-top: 50px;
+  }
+
+  .foguete-intro {
+    display: none;
+  }
+}
+
+.fas {
+  margin-bottom: 15px;
+  font-size: 8rem;
+  color: rgb(57, 47, 196);
+}
+
+.text-servicos {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.servicos-span {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: rgb(46, 46, 46);
+}
+
+.servicos {
+  margin-top: 5rem;
+}
